@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NEOX VM LAB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="desktop">
+    <div class="desktop-icons">
+      <button class="icon" data-app="files">📁<span>Archivos</span></button>
+      <button class="icon" data-app="terminal">💻<span>Terminal</span></button>
+      <button class="icon" data-app="settings">⚙️<span>Ajustes</span></button>
+    </div>
+    <section id="window-area"></section>
+    <nav class="taskbar">
+      <button id="start-button">◉ NEOX</button>
+      <div id="taskbar-apps"></div>
+      <span id="clock"></span>
+    </nav>
+    <div id="start-menu" hidden>
+      <h2>NEOX VM LAB</h2>
+      <button data-app="files">📁 Explorador de archivos</button>
+      <button data-app="terminal">💻 Terminal</button>
+      <button data-app="settings">⚙️ Configuración</button>
+      <p>Web Lab • Experimental</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
