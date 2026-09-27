@@ -1,102 +1,78 @@
 # 🖥️ NEOX VM LAB
 
-**NEOX VM LAB** es un proyecto experimental de sistema operativo de escritorio creado para ejecutarse principalmente en el navegador durante el desarrollo y, más adelante, como una imagen de prueba para máquinas virtuales.
+**NEOX VM LAB** es el laboratorio web del escritorio NEOX. La versión actual **0.2.0** permite probar la experiencia de escritorio, aplicaciones simuladas y una terminal controlada desde el navegador.
 
-> ⚠️ **Estado:** desarrollo temprano / laboratorio. No es un sistema operativo de producción.
+> ⚠️ **Estado:** laboratorio experimental. No es un sistema operativo de producción ni una VM real.
 
-## 🎯 Objetivo
+## ✨ Versión 0.2
 
-Construir una experiencia de escritorio tipo sistema operativo alrededor de una interfaz web, manteniendo los componentes separados para poder probarlos antes de preparar una ISO.
-
-## 🧩 Componentes planeados
-
-- 🪟 Escritorio y sistema de ventanas
+- 🖥️ Escritorio NEOX
 - 📋 Menú Start
 - 📌 Barra de tareas
-- 📁 Explorador de archivos
-- 💻 Terminal
-- ⚙️ Configuración
-- 🌐 Navegador
-- 🛒 App Store experimental
+- 📁 Explorador de archivos virtual
+- 💻 Terminal interactiva simulada
 - 📊 Monitor del sistema
-- 🖥️ VM Manager
-- 🌐 Panel de red
-- 🔔 Notificaciones
-- 🔒 Centro de seguridad
-- 👤 Perfiles de usuario
-- 💾 Sistema de archivos virtual para el laboratorio
+- ⚙️ Configuración
+- ⏱️ Reloj
+- 📱 Interfaz adaptable
 
-## 🏗️ Arquitectura inicial
+### Terminal
+
+Comandos disponibles:
+
+`help` · `apps` · `status` · `version` · `clear`
+
+Los comandos son internos del Web Lab y no ejecutan comandos del sistema anfitrión.
+
+## 🏗️ Arquitectura
 
 ```text
 NEOX VM LAB
-│
 ├── Desktop
 ├── Window Manager
 ├── Start Menu
 ├── Taskbar
 ├── File Explorer
-├── Terminal
-├── Settings
-├── Browser
-├── App Store
+├── Terminal Simulator
 ├── System Monitor
-└── VM Manager
+└── Settings
 ```
 
-GitHub Pages puede servir esta interfaz, pero **no convierte la página en una máquina virtual real**. Las funciones que necesiten acceso al hardware o a un sistema invitado real deberán implementarse posteriormente mediante componentes apropiados.
+## 🧪 Próximas etapas
 
-## 🧪 Fases del proyecto
+### Web Lab
+- [x] Shell de escritorio
+- [x] Ventanas
+- [x] Start Menu
+- [x] Taskbar
+- [x] Sistema de aplicaciones
+- [x] Terminal simulada
+- [x] Monitor del sistema
+- [ ] Arrastrar/redimensionar ventanas
+- [ ] Sistema de archivos virtual persistente
 
-### Fase 1 — Web Lab
-- [x] Crear repositorio
-- [ ] Crear shell del escritorio
-- [ ] Ventanas arrastrables
-- [ ] Start Menu
-- [ ] Taskbar
-- [ ] Sistema de aplicaciones
-- [ ] Terminal simulada
-- [ ] Explorador de archivos virtual
-
-### Fase 2 — System Lab
-- [ ] Sistema de configuración
-- [ ] Usuarios y perfiles locales
+### System Lab
+- [ ] Usuarios y perfiles
 - [ ] Almacenamiento virtual
-- [ ] Monitor del sistema
+- [ ] API interna
 - [ ] Red simulada
-- [ ] API interna entre componentes
+- [ ] Centro de seguridad
 
-### Fase 3 — VM Lab
-- [ ] Definir formato de imagen de prueba
-- [ ] Integración con el repositorio de ISOs
-- [ ] Pruebas en VirtualBox
-- [ ] Pruebas en VMware
-- [ ] Documentación de instalación
+### VM Lab
+- [ ] Integración con el instalador NEOX
+- [ ] Pruebas en VM
+- [ ] Imagen experimental
 
-### Fase 4 — Experimental ISO
-Las imágenes arrancables se mantendrán separadas en **NEOX-VM-LAB-isos**.
+La construcción de ISO se mantiene separada en **Neox-VM-Lab-isos** mientras se diseña primero el sistema de instalación.
 
-> Las ISO serán exclusivamente experimentales y estarán destinadas a pruebas controladas en máquinas virtuales.
-
-## 🗂️ Repositorios relacionados
+## 🗂️ Repositorios
 
 | Repositorio | Propósito |
 |---|---|
-| `NEOX-VM-LAB` | Sistema operativo / escritorio |
-| `NEOX-VM-LAB-Servers` | Edición orientada a servidores |
-| `NEOX-VM-LAB-isos` | Construcción y almacenamiento de ISO experimentales |
-| `gd-lite-web-opensorce` | Proyecto independiente de GDLite Web Edition |
-
-## 🛠️ Desarrollo
-
-La estructura del proyecto se irá construyendo por módulos. La prioridad es que cada módulo pueda probarse de forma independiente antes de integrarlo en el escritorio.
-
-Cuando exista una versión web funcional, se podrá publicar mediante GitHub Pages.
+| `Neox-VM-Lab` | Escritorio NEOX |
+| `Neox-VM-Lab-Servers` | Entorno de servidores |
+| `Neox-VM-Lab-isos` | ISO e instalador experimental |
 
 ## 📜 Licencia
 
-Este proyecto utiliza la **MIT License**.
-
----
-
-**NEOX VM LAB — Desktop OS Laboratory** 🖥️
+MIT License
